@@ -23,6 +23,7 @@
         <mapstruct.version>1.6.3</mapstruct.version>
         <hibernate-validator.version>8.0.1.Final</hibernate-validator.version>
         <jakarta-validation-api.version>3.1.0</jakarta-validation-api.version>
+        <swagger-openapi.version>2.7.0</swagger-openapi.version>
     </properties>
 
     <dependencies>
@@ -71,6 +72,11 @@
             <groupId>jakarta.validation</groupId>
             <artifactId>jakarta.validation-api</artifactId>
             <version>${jakarta-validation-api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>${swagger-openapi.version}</version>
         </dependency>
 
     </dependencies>
