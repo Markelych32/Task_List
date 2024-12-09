@@ -12,3 +12,8 @@ spring:
       ddl-auto: none
 server:
   port: 8888
+security:
+  jwt:
+    secret: Zmhid2Z1MzIzMjc4dDRnM2loZmlvMTJvam9pSkRGMTI4M1I4OTFPSEZKRElXSkVGMjE5ODBIRlc=
+    access: 360000
+    refresh: 2592000000
