@@ -7,18 +7,24 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import ru.solonchev.tasklist.domain.task.Task;
 import ru.solonchev.tasklist.service.TaskService;
+import ru.solonchev.tasklist.service.impl.TaskServiceImpl;
 import ru.solonchev.tasklist.web.controller.task.TaskController;
 import ru.solonchev.tasklist.web.dto.task.TaskDto;
 import ru.solonchev.tasklist.web.dto.validation.OnUpdate;
 import ru.solonchev.tasklist.web.mapper.TaskMapper;
 
 @RestController
-@RequiredArgsConstructor
 @Validated
 public class TaskControllerImpl implements TaskController {
 
     private final TaskService taskService;
     private final TaskMapper taskMapper;
+
+
+    public TaskControllerImpl(TaskService taskService, TaskMapper taskMapper) {
+        this.taskMapper = taskMapper;
+        this.taskService = taskService;
+    }
 
     @Override
     public TaskDto update(

@@ -6,7 +6,7 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
-import ru.solonchev.tasklist.domain.task.Status;
+import ru.solonchev.tasklist.domain.task.TaskStatus;
 import ru.solonchev.tasklist.web.dto.validation.OnCreate;
 import ru.solonchev.tasklist.web.dto.validation.OnUpdate;
 
@@ -30,7 +30,7 @@ public class TaskDto {
     private String description;
 
     @Schema(description = "Task status.", example = "CREATED", allowableValues = {"CREATED", "IN_PROGRESS", "COMPLETED"})
-    private Status status;
+    private TaskStatus taskStatus;
 
     @DateTimeFormat(iso = DateTimeFormat.ISO.TIME)
     @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm")

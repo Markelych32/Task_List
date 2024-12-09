@@ -18,7 +18,6 @@ import ru.solonchev.tasklist.web.mapper.UserMapper;
 import java.util.List;
 
 @RestController
-@RequiredArgsConstructor
 @Validated
 public class UserControllerImpl implements UserController {
 
@@ -27,6 +26,13 @@ public class UserControllerImpl implements UserController {
 
     private final UserMapper userMapper;
     private final TaskMapper taskMapper;
+
+    public UserControllerImpl(UserService userService, TaskService taskService, UserMapper userMapper, TaskMapper taskMapper) {
+        this.userService = userService;
+        this.taskService = taskService;
+        this.userMapper = userMapper;
+        this.taskMapper = taskMapper;
+    }
 
     @Override
     public UserDto update(

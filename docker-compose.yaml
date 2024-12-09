@@ -1,1 +1,13 @@
-services: "3.8"
+version: "3.9"
+
+services:
+  postgresql_db:
+    image: postgres:14
+    container_name: tasklist_db
+    restart: always
+    environment:
+      POSTGRES_USER: mark
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: tasklist
+    ports:
+      - "5434:5432"

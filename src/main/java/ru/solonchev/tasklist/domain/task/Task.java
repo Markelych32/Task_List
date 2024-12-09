@@ -9,6 +9,6 @@ public class Task {
     private Long id;
     private String title;
     private String description;
-    private Status status;
+    private TaskStatus taskStatus;
     private LocalDateTime expirationDate;
 }

@@ -1,6 +1,6 @@
 package ru.solonchev.tasklist.domain.task;
 
-public enum Status {
+public enum TaskStatus {
     CREATED,
     IN_PROGRESS,
     COMPLETED
